@@ -1,0 +1,35 @@
+﻿@using Lab4EDI_1C18.Models;
+@model  IEnumerable<Lab4EDI_1C18.Models.Estampita>
+@{
+    ViewBag.Title = "Album";
+}
+<pages validaterequest="false"></pages>
+<h2>Album Completo</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.valor)
+            </td>
+            <td></td>
+        </tr>
+    }
+
+</table>

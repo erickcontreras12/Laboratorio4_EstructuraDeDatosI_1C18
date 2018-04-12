@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Lab4EDI_1C18.Models;
 
 namespace Lab4EDI_1C18.DBContext
 {

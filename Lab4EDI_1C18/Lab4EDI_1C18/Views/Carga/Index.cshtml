@@ -1,0 +1,32 @@
+﻿@using Lab4EDI_1C18.Models;
+@model  IEnumerable<Lab4EDI_1C18.Models.Estampas>
+@{
+    ViewBag.Title = "Coleccion";
+}
+<pages validaterequest="false"></pages>
+<h2>Mostrar paises disponibles</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.ActionLink("Faltantes", "Faltantes", new { id = item.Nombre })|
+                @Html.ActionLink("Cambios", "Cambios", new { id = item.Nombre })|
+                @Html.ActionLink("Coleccionadas", "Coleccionadas", new { id = item.Nombre })
+            </td>
+        </tr>
+    }
+
+</table>

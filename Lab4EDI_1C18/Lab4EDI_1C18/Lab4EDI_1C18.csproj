@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CargaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DBContext\DefaultConnection.cs" />
     <Compile Include="Global.asax.cs">
@@ -195,6 +196,13 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Carga\Cambios.cshtml" />
+    <Content Include="Views\Carga\Coleccionadas.cshtml" />
+    <Content Include="Views\Carga\Create.cshtml" />
+    <Content Include="Views\Carga\Create2.cshtml" />
+    <Content Include="Views\Carga\Faltantes.cshtml" />
+    <Content Include="Views\Carga\Index.cshtml" />
+    <Content Include="Views\Carga\Index2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

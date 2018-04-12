@@ -1,0 +1,27 @@
+﻿@model  IEnumerable<int>
+
+@{
+    ViewBag.Title = "Coleccionadas";
+}
+
+<h2>Coleccionadas</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Numeros
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item)
+            </td>
+            <td></td>
+        </tr>
+    }
+
+</table>

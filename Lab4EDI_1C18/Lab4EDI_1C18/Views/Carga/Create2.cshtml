@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Create de Album completo Json";
+}
+
+<h2>Carga de Archivo Json para Album Completo</h2>
+
+@using (Html.BeginForm("Create2", "Carga", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>Seleccionar archivo:</span>
+    <input type="file" name="postedFile" />
+    <br />
+    <input type="submit" value="Subir" />
+    <span style="color:green">@ViewBag.Message</span><br />
+}
+<br />
+<br />
+<br />
+<div>
+
+</div>
