@@ -203,6 +203,7 @@
     <Content Include="Views\Carga\Faltantes.cshtml" />
     <Content Include="Views\Carga\Index.cshtml" />
     <Content Include="Views\Carga\Index2.cshtml" />
+    <Content Include="Views\Carga\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

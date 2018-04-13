@@ -14,7 +14,7 @@ namespace Lab4EDI_1C18.DBContext
         public Dictionary<string, Estampas> diccionario1 = new Dictionary<string, Estampas>();
         public Dictionary<string, Estampita> diccionario2 = new Dictionary<string, Estampita>();
         public List<Estampita> ListadoFinal = new List<Estampita>();
-
+        public Estampas actualtrabajando;
         public int IDActual { get; set; }
 
         private DefaultConnection()

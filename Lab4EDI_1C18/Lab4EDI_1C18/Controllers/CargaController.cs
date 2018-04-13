@@ -8,7 +8,7 @@ using System.IO;
 using Newtonsoft.Json.Linq;
 using Lab4EDI_1C18.Models;
 using Newtonsoft.Json;
-
+using System.Net;
 
 namespace Lab4EDI_1C18.Controllers
 {
@@ -18,6 +18,7 @@ namespace Lab4EDI_1C18.Controllers
         List<int> cambio;
         List<int> faltan;
         List<int> colecc;
+        
         // GET: Carga
         public ActionResult Index()
         {
@@ -39,21 +40,21 @@ namespace Lab4EDI_1C18.Controllers
         {
             Estampas x = db.diccionario1[id];
             cambio = x.cambios.ToList();
-
+            db.actualtrabajando = x;
             return View(cambio.ToList());
         }
         public ActionResult Coleccionadas(string id)
         {
             Estampas x = db.diccionario1[id];
             colecc = x.coleccionadas.ToList();
-
+            db.actualtrabajando = x;
             return View(colecc.ToList());
         }
         public ActionResult Faltantes(string id)
         {
             Estampas x = db.diccionario1[id];
             faltan = x.faltantes.ToList();
-
+            db.actualtrabajando = x;
             return View(faltan.ToList());
         }
 
@@ -176,9 +177,30 @@ namespace Lab4EDI_1C18.Controllers
 
 
         // GET: Carga/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(string id)
         {
-            return View();
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            Estampita jugadorBuscado = db.diccionario2[id];
+
+            if (jugadorBuscado == null)
+            {
+                return HttpNotFound();
+            }
+            if (jugadorBuscado.valor==false)
+            {
+                jugadorBuscado.valor = true;
+            }
+            else
+            {
+                jugadorBuscado.valor = false;
+            }
+
+
+            return RedirectToAction("Index2");
         }
 
         // POST: Carga/Edit/5
@@ -187,7 +209,7 @@ namespace Lab4EDI_1C18.Controllers
         {
             try
             {
-                // TODO: Add update logic here
+                // TODO: Add delete logic here
 
                 return RedirectToAction("Index");
             }
@@ -200,7 +222,15 @@ namespace Lab4EDI_1C18.Controllers
         // GET: Carga/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            db.actualtrabajando.faltantes.Remove(id);
+            db.actualtrabajando.coleccionadas.Add(id);
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult cambiar(int id)
+        {
+            db.actualtrabajando.cambios.Remove(id);            
+            return RedirectToAction("Index");
         }
 
         // POST: Carga/Delete/5

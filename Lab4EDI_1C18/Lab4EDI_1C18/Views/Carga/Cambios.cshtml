@@ -5,7 +5,7 @@
     ViewBag.Title = "Cambios";
 }
 
-<h2>Cambios</h2>
+<h2>Lista de cambios de estampas (Borrar si ya la cambie)</h2>
 
 <table class="table">
     <tr>
@@ -21,7 +21,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item)
             </td>
-            <td></td>
+            <td>
+                @Html.ActionLink("Deshacerme de la estampita (Venderla)", "cambiar", new { id = item })                
+            </td>
         </tr>
     }
 

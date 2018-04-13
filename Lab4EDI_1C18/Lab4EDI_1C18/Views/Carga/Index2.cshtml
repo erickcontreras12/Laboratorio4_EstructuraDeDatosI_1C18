@@ -28,7 +28,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.valor)
             </td>
-            <td></td>
+            <td>
+                @Html.ActionLink("Cambiar estado de estampita", "Edit", new { id = item.Nombre })                
+            </td>
         </tr>
     }
 
