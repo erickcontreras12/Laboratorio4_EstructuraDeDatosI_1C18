@@ -110,7 +110,7 @@ namespace Lab4EDI_1C18.Controllers
                 }
                 catch
                 {
-                    ViewBag.Message = "Dato erroneo.";
+                    ViewBag.Message1 = "Dato erroneo.";
                 }
             }
             return View();
@@ -167,7 +167,7 @@ namespace Lab4EDI_1C18.Controllers
                 }
                 catch
                 {
-                    ViewBag.Message = "Dato erroneo.";
+                    ViewBag.Message1 = "Dato erroneo.";
                 }
             }
             return View();

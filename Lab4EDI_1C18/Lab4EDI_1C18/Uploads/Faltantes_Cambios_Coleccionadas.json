@@ -1,0 +1,43 @@
+[{"país1": {
+ "Nombre":"Alemania",
+ "faltantes": [1,2,3],
+ "coleccionadas": [11,12,13,14],
+ "cambios": [11,18,21]
+}},
+{"país2": {
+ "Nombre":"Rusia",	
+ "faltantes": [101,102,103],
+ "coleccionadas": [111,112,113,114],
+ "cambios": [111,118,121]
+}},
+{"país3": {
+ "Nombre":"España",	
+ "faltantes": [4,5,6,7,8],
+ "coleccionadas": [9,10,11,12],
+ "cambios": [9,11,12]
+}},
+{"país4": {
+ "Nombre":"Portugal",	
+ "faltantes": [15,16,19],
+ "coleccionadas": [13,14,17,18,19],
+ "cambios": [13,18,19]
+}},
+{"país5": {
+ "Nombre":"Brasil",	
+ "faltantes": [20,21,25,26,27,28,29],
+ "coleccionadas": [22,24,23,30],
+ "cambios": [22,30,23]
+}},
+{"país6": {
+ "Nombre":"Argentina",	
+ "faltantes": [200,202,203],
+ "coleccionadas": [201,207,208,211],
+ "cambios": [201,208,211]
+}},
+{"país7": {
+ "Nombre":"Francia",	
+ "faltantes": [75,79,81,85,88],
+ "coleccionadas": [76,77,78,80,82,83,84,86,87],
+ "cambios": [76,80,86,87,88]
+}}
+]

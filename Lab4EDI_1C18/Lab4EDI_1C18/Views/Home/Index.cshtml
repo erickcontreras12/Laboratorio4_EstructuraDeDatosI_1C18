@@ -2,15 +2,40 @@
     ViewBag.Title = "Inicio";
 }
 
+<style type="text/css">
+    #foto {
+        
+    }
+
+    .jumbotron{
+        height:500px;
+        background-color:white;
+        width:auto;
+        border: 3px;
+        border-radius:5px;
+        border-color:black;
+    }
+
+    body{
+        background-color:lavender;
+    }
+</style> 
+
 <div class="jumbotron">
-    <h1>Laboratorio 4 Album del Mundial</h1>    
+
+    <h1>Laboratorio 4 Álbum del Mundial</h1>  
+    <div class="col-md-4">
+        @Html.ActionLink("• Cargar Json de Coleccion Faltantes y Cambios", "Create", "Carga")<br />
+        @Html.ActionLink("• Cargar Json de Album", "Create2", "Carga")
+    </div>
+    <div id="foto">
+        <img src="@Url.Content("~/Images/rusia.jpg")" width="500" height="300" />
+    </div>  
 </div>
 
 <div class="row">
-    <div class="col-md-4">
-        @Html.ActionLink("Cargar Json de Coleccion Faltantes y Cambios", "Create", "Carga")<br />
-        @Html.ActionLink("Cargar Json de Album", "Create2", "Carga")
-    </div>
+   
+   
     <div class="col-md-4">
       
     </div>

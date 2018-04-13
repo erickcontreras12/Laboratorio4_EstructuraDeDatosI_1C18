@@ -1,4 +1,24 @@
 ﻿<!DOCTYPE html>
+<style type="text/css">
+    #foto{
+        float:right;
+    }
+
+    .ini{
+        font-size:20pt;
+        float:left;
+        padding-top:15px;
+        color:darkgray;
+    }
+
+    .ini:hover{
+        color:white;
+        font-style:normal;
+        text-decoration:none;
+    }
+    
+    
+</style> 
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -7,24 +27,34 @@
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
 </head>
+
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+              @Html.ActionLink("Album de Estampas Rusia 2018", "Index", "Home", new { area = "" }, new { @class = "ini" })
+
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
+                    <li style="font-size:20pt; padding:10px;">@Html.ActionLink("Inicio", "Index", "Home")</li>                    
+                    <li style="font-size:20pt; padding:10px;">@Html.ActionLink("Contacto", "Contact", "Home")</li>
+
                 </ul>
+                <div id="foto">
+                    <img src="@Url.Content("~/Images/paninilogo.jpg")" width="300" height="100" />
+                </div>
+
             </div>
         </div>
     </div>
@@ -32,7 +62,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            <p>&copy; @DateTime.Now.Year -Laboratorio 4 ED1</p>
         </footer>
     </div>
 
